@@ -17,7 +17,7 @@ public class LaunhPreview : MonoBehaviour
     public void SetStartPoint(Vector3 worldPoint)
     {
         dragStartPosition = worldPoint;
-        lineRenderer.SetPosition(0,dragStartPosition);
+        lineRenderer?.SetPosition(0,dragStartPosition);
     }
 
     public void SetEndPoint(Vector3 worldPoint)
@@ -25,6 +25,6 @@ public class LaunhPreview : MonoBehaviour
         Vector3 pointOffset = worldPoint - dragStartPosition;
         Vector3 endPoint = transform.position + pointOffset;
         
-        lineRenderer.SetPosition(1,endPoint);
+        lineRenderer?.SetPosition(1,endPoint);
     }
 }
